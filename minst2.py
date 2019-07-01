@@ -33,11 +33,14 @@ else:
                   loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
     print("Training model...")
-    model.fit(x_train, y_train, epochs=10)
+    model.fit(x_train, y_train, epochs=20)
     print("Saving model...")
     model.save(MODEL_FILENAME)
-    #model.evaluate(x_test, y_test)
 
+print("Nehany adat a modellrol")
+print("A modell pontossaga")
+model.evaluate(x_test, y_test)
+print("A modell leirasa")
 model.summary()
 # itt most a predict az azt is szeretné tudni, hogy hány darab képról kell jósolnia.
 # Szóval egy 1x 28x 28-as listát adunk be neki. (nem csak 1 ről tudna jósolni)
