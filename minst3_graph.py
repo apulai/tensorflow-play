@@ -56,5 +56,5 @@ plt.imshow(x_test[image_index].reshape(28, 28),cmap='Greys')
 plt.show()
 pred = model.predict(x_test[image_index].reshape(1, 28, 28, 1))
 print(pred.argmax())
-
+print("Vege")
 
